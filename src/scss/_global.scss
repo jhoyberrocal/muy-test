@@ -1,0 +1,55 @@
+:root {
+  --background: #{$background};
+  --font-size: #{$font-size};
+  --text-color: #{$text};
+  --gray-color: #{$gray};
+  --sub-text: #{$sub-text};
+  --accent-color: #{$yellow};
+  --z-background: 1;
+  --z-main: 2;
+  --z-alerts: 9;
+  --z-loading: 10;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: var(--font-size);
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  &:visited {
+    color: var(--text-color);
+  }
+}
+
+@media (min-width: $md-size) {
+  html {
+    font-size: calc(var(--font-size) + 2px);
+  }
+}

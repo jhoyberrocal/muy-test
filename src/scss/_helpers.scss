@@ -1,0 +1,19 @@
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@for $i from 1 through 4 {
+  .mt-#{$i} {
+    margin-top: unquote($i+'rem');
+  }
+  .mb-#{$i} {
+    margin-bottom: unquote($i+'rem');
+  }
+  .ml-#{$i} {
+    margin-left: unquote($i+'rem');
+  }
+  .mr-#{$i} {
+    margin-right: unquote($i+'rem');
+  }
+}
